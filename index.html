@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Sławomir Kozera – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio von Sławomir Kozera – Fachinformatiker für Anwendungsentwicklung (Umschulung). Projekte, Fähigkeiten, Kontakt.">
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#111827;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --accent:#38bdf8;
+      --accent-2:#22c55e;
+      --maxw:1000px;
+      --radius:18px;
+      --shadow:0 10px 25px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw);margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:linear-gradient(to right,#0f172a,#1e293b);backdrop-filter:blur(6px);z-index:10}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    nav .brand{font-weight:700;}
+    nav .links a{margin-left:16px;font-weight:500}
+    h1,h2,h3{line-height:1.2}
+    h1{font-size:2.2rem;margin:0 0 12px}
+    h2{font-size:1.6rem;margin:0 0 12px}
+    .hero{padding:64px 0;text-align:center}
+    .hero h1{font-size:2.5rem}
+    .badge{display:inline-block;background:var(--accent);color:#fff;padding:4px 12px;border-radius:999px;font-size:.9rem;margin-top:12px}
+    .card{background:var(--card);border-radius:var(--radius);padding:24px;margin:24px 0;box-shadow:var(--shadow)}
+    .grid{display:grid;gap:24px}
+    .grid-cols-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    .list{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .pill{background:var(--muted);color:#000;padding:6px 12px;border-radius:999px;font-size:.9rem}
+    .btn{display:inline-block;background:var(--accent-2);color:#fff;padding:8px 16px;border-radius:var(--radius);font-weight:600;margin-top:12px}
+    .btn:hover{background:#16a34a}
+    footer{padding:32px;text-align:center;color:var(--muted);font-size:.9rem}
+    @media(max-width:600px){.hero h1{font-size:1.8rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Sławomir Kozera</div>
+        <div class="links">
+          <a href="#ueber-mich">Über mich</a>
+          <a href="#projekte">Projekte</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Fachinformatiker (AE) – Umschulung · Junior Developer</h1>
+      <p>Ich konzentriere mich hauptsächlich auf Python und die Arbeit mit Datenanalyse und KI. 
+        Für diese Praktikumsstelle möchte ich aber auch meine Kenntnisse in HTML, CSS und JavaScript einbringen und weiterentwickeln.</p>
+      <span class="badge">Verfügbar ab 11.12.2025 · Hannover</span>
+    </section>
+
+    <!-- Über mich -->
+    <section id="ueber-mich">
+      <div class="card">
+        <h2>Über mich</h2>
+        <p>Ich befinde mich derzeit in einer Umschulung zum Fachinformatiker für Anwendungsentwicklung (GFN Hannover). Mein Ziel ist es, praxisnahe Erfahrung zu sammeln und moderne Anwendungen zu entwickeln.</p>
+        <div class="list">
+          <span class="pill">HTML</span>
+          <span class="pill">CSS</span>
+          <span class="pill">Python</span>
+          <span class="pill">JavaScript</span>
+            <span class="pill">Java</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projekte -->
+    <section id="projekte">
+      <h2>Projekte</h2>
+      <div class="grid grid-cols-3">
+        <article class="card project">
+          <h3>Mini Landing Page</h3>
+          <p>Einfacher Onepager mit HTML und CSS, optimiert für Mobilgeräte.(In Arbeit)</p>
+          <a class="btn" href="#">Demo ansehen</a>
+          <a class="btn" href="#">Code auf GitHub</a>
+        </article>
+        <article class="card project">
+          <h3>Python Skript</h3>
+          <p>Kleines Skript zur Datenanalyse mit Pandas und Matplotlib(In Arbeit).</p>
+          <a class="btn" href="#">Demo ansehen</a>
+          <a class="btn" href="#">Code auf GitHub</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="contact">
+      <div class="card">
+        <h2>Kontakt</h2>
+        <p>Am einfachsten erreichen Sie mich per E-Mail oder über LinkedIn/GitHub.</p>
+        <div class="list">
+          <a class="btn" href="mailto:slawomir.kozera1@gmail.com">E-Mail senden</a>
+          <a class="btn" href="https://www.linkedin.com/in/slawomir-kozera-b2a59b161/" target="_blank">LinkedIn</a>
+          <a class="btn" href="https://https://github.com/IsobarDesign" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Sławomir Kozera
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
