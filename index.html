@@ -1,10 +1,15 @@
 <!doctype html>
 <html lang="de">
 <head>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
   <meta charset="utf-8">
   <title>Sławomir Kozera – Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio von Sławomir Kozera – Fachinformatiker für Anwendungsentwicklung (Umschulung). Projekte, Fähigkeiten, Kontakt.">
+  <mea name="author" content="Sławomir Kozera">
+  <meta name="keywords" content="Portfolio, Fachinformatiker, Anwendungsentwicklung, Junior Developer, HTML, CSS, JavaScript, Python, Projekte, Kontakt">
+  <meta name="robots" content="index, follow">
+
   <style>
     :root{
       --bg:#0f172a;
@@ -16,6 +21,14 @@
       --maxw:1000px;
       --radius:18px;
       --shadow:0 10px 25px rgba(0,0,0,.25);
+    }
+    body.light-theme{
+      --bg:#f9fafb;
+      --card:#ffffff;
+      --text:#1e293b;
+      --muted:#64748b;
+      --accent:#3b82f6;
+      --accent-2:#16a34a;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,sans-serif}
@@ -45,6 +58,7 @@
 </head>
 <body>
   <header>
+    <button id="theme-toggle">🌙 / ☀️</button>
     <div class="container">
       <nav>
         <div class="brand">Sławomir Kozera</div>
@@ -119,7 +133,7 @@
   <p>
     Konsolen-App in Java zur Verwaltung von Ausgaben. 
     Mit Maven strukturiert und durch Unit Tests abgesichert. 
-    Fokus: saubere Architektur & Test Driven Development.
+    
   </p>
   <a class="btn" href="https://github.com/IsobarDesign/ExpensesCalculator" target="_blank">GitHub</a>
 </article>
@@ -132,13 +146,6 @@
     Anhand einer einfachen <code>math.js</code>-Datei habe ich 
     grundlegende mathematische Funktionen implementiert und mit 
     <code>math.test.js</code> die Tests dazu erstellt.
-  </p>
-  <p>
-    Das Projekt zeigt, wie wichtig Testautomatisierung im modernen 
-    Software Development ist. Ich habe dabei gelernt, 
-    wie man eine Node.js-Umgebung einrichtet, 
-    Abhängigkeiten mit <code>npm</code> verwaltet und 
-    Tests automatisiert durchführt.
   </p>
   <a class="btn" href="https://github.com/IsobarDesign/js-unit-tests-demo" target="_blank">Code auf GitHub</a>
       </div>
@@ -164,6 +171,9 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');});
   </script>
 </body>
 </html>
